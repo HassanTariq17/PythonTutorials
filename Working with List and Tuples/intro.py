@@ -61,21 +61,63 @@ sortedList = sorted(courses)    #This will return the sorted list
 print (sortedList)
 
 #more built inn functions
-#min, max, sum,find values in a list , split values based on a delimeter
-#join indexs of a list based on a delimiter , find index of a cerain index , find a vlue in list, 
+#split values based on a delimeter
+print (max(numbers))  #to print maximum number in the list
+print (min(numbers))  #To get the minimum number in the list.
+print (sum(numbers))  #to get the sum of all indexs in the list
+
+#to find a value in the list
+print (courses.index('Math'))
+
+#Join strings in the list given a delimeter
+delimeter = '-'
+new_string = delimeter.join(courses)
+print (new_string)
+
+#Split the string
+splitted_string = new_string.split('-')
+print (splitted_string)
+
+#find a vlue in list
+print ('Math' in courses)
+
+
 #iterate through items of list
 #1. Using simple for loop
-#2. Usning enumerate (start value)
+for each in courses:
+	print (each)
+
+#2. Usning enumerate (start value) enumerate returns 2 values one the index and other the value of index
+for index,each in enumerate(courses):   
+	print (index,each)
 
 #List vs Tuples
 #muteable vs immuteable
+#Lists are mutebale. Means you can change values of lists once assigned.
+#Lists are immutebale. Means you can not change values of lists once assigned.
+
+#Tuples 
+new_tuple = (1,2,3,'Math')
+print (new_tuple)
 
 #Sets
-#Duplicate value
+new_set = {1,1,2,3,4,5}    #duplicate values are not allowed in sets. sets automatically remove duplicate values.
+print (new_set)
+
 #Check similarity using intersection
+set1 = {1,2,3,4}
+set2 = {3,4,5,6,}
+print (set1.intersection(set2))      #this will give all similar items in two sets
+
+
 #Combine using union
+set3 = set1.union(set2)
+print (set3)
 
 #creating empty lists, tuples, sets
+empty_list = []
+empty_tuple = ()
+empty_set = set()    #empty_set = {}   will declare a dictionary
 #Dictionary vs Sets
 
 
